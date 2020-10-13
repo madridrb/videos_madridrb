@@ -1,3 +1,5 @@
 [0] drawtext=textfile=cover_text.txt:fontcolor=white:fontsize=64:x=w/2-text_w/2:y=h/2-text_h:fontfile='/Library/Fonts/Arial Black.ttf',
-drawtext=textfile=date_text.txt:fontcolor=white:fontsize=32:x=w/2-text_w/2:y=h/2+text_h:fontfile='/Library/Fonts/Arial Black.ttf'
+drawtext=textfile=date_text.txt:fontcolor=white:fontsize=32:x=w/2-text_w/2:y=h/2+text_h:fontfile='/Library/Fonts/Arial Black.ttf' [video];
+[video][1:a] concat=n=1:v=1:a=1 [v][a]
+
 

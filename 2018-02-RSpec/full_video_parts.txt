@@ -1,0 +1,7 @@
+file output/build/cover.mp4
+file output/build/title.mp4
+file output/build/sponsors.mp4
+file output/build/video.mp4
+file output/build/sponsors.mp4
+file output/build/title.mp4
+file output/build/cover.mp4

@@ -1,27 +1,22 @@
 BUILD_DIR=output/build
+$(info $(shell mkdir -p $(BUILD_DIR)))
 
-output/full_video.mp4: gen_full_video.sh full_video_parts.txt $(BUILD_DIR)/cover.mp4 $(BUILD_DIR)/title.mp4 $(BUILD_DIR)/sponsors.mp4 $(BUILD_DIR)/video.mp4
-	bash gen_full_video.sh
+output/full_video.mp4: full_video/* $(BUILD_DIR)/video.mp4 $(BUILD_DIR)/sponsors.mp4 $(BUILD_DIR)/title.mp4 $(BUILD_DIR)/cover.mp4
+	cd full_video && bash gen_full_video.sh
 
-$(BUILD_DIR)/video.mp4: $(BUILD_DIR) gen_video.sh video_script $(BUILD_DIR)/camera.MTS
-	bash gen_video.sh
+$(BUILD_DIR)/video.mp4: video/* $(BUILD_DIR)/camera.MTS input/*.ogv
+	cd video && bash gen_video.sh
 
-$(BUILD_DIR)/camera.mp4: $(BUILD_DIR) gen_camera.sh input/*.MTS
-	bash gen_camera.sh
+$(BUILD_DIR)/camera.MTS: camera/* input/*.MTS
+	cd camera && bash gen_camera.sh
 
-$(BUILD_DIR)/sponsors.mp4: $(BUILD_DIR) gen_sponsors.sh sponsors_script ../shared/sponsors*.png
-	bash gen_sponsors.sh
+$(BUILD_DIR)/sponsors.mp4: sponsors/* ../shared/sponsors*.png
+	cd sponsors && bash gen_sponsors.sh
 
-$(BUILD_DIR)/title.mp4: $(BUILD_DIR) gen_title.sh title_script title_text.txt speaker_text.txt
-	bash gen_title.sh
+$(BUILD_DIR)/title.mp4: title/*
+	cd title && bash gen_title.sh
 
-$(BUILD_DIR)/cover.mp4: $(BUILD_DIR) gen_cover.sh cover_script cover_text.txt date_text.txt contact_text.txt
-	bash gen_cover.sh
+$(BUILD_DIR)/cover.mp4: cover/* ../shared/madridrb-logo.png
+	cd cover && bash gen_cover.sh
 
-$(BUILD_DIR): output
-	mkdir -p $(BUILD_DIR)
-
-output:
-	@echo You need to create the 'output' folder
-	exit 1
 

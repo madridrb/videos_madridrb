@@ -1,1 +1,0 @@
-Madrid.rb -Feb 2018 - Introducción a RSpec

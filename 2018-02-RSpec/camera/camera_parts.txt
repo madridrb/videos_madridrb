@@ -1,0 +1,2 @@
+file ../input/00005-008.MTS
+file ../input/00006.MTS

@@ -11,7 +11,7 @@ logo or the slides for the sponsors.
 
 The videos are generated using `ffmpeg`, so you'll need to install
 that in your system (for macOS, using brew is highly recommended `brew
-install ffmpeg`.
+install ffmpeg`).
 
 The repo doesn't contain the actual video data. The scripts in each
 folder expect to find an `input` dir with the raw video files.

@@ -1,7 +1,7 @@
-ffmpeg -ss 00:05:42 -i input/00005-008.MTS\
+ffmpeg -ss 00:05:42 -i output/build/camera.MTS\
        -ss 00:05:15 -i input/out1.ogv \
        -filter_complex_script video_script \
-       -shortest \
+       -t 1:02:52 \
        -y output/build/video.mp4
 
 

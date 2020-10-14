@@ -2,6 +2,6 @@ color=black:s=1920x1080 [black];
 [0]crop=w=700:x=900:y=0 [camera];
 [black][camera] overlay=0:0 [bg];
 [1]scale=w=1500:h=-1 [slides];
-[bg][slides] overlay=main_w-overlay_w-10:main_h/2-overlay_h/2 [final];
+[bg][slides] overlay=main_w-overlay_w-10:main_h/2-overlay_h/2:enable='gte(t,26)' [final];
 [final] drawtext=textfile=bottom_text.txt:fontcolor=0x888888:fontsize=20:x=w-text_w-10:y=h-text_h-1:fontfile='/Library/Fonts/Arial Black.ttf'
 

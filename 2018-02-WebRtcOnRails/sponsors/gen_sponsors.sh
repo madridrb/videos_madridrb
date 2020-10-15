@@ -1,4 +1,4 @@
-ffmpeg -f lavfi -i color=size=1920x1080:color=black:d=20 \
+ffmpeg -f lavfi -i color=size=1280x720:color=black:d=20 \
        -i ../../shared/sponsors1.png \
        -i ../../shared/sponsors2.png \
        -i ../../shared/sponsors3.png \

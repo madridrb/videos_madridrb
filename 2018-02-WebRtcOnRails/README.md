@@ -1,6 +1,6 @@
 # WebRTC on Rails - Febrero 2018
 
-A Madrid.rb Session by 
+A Madrid.rb Session by Alejandro González @agonzaleznu
 
 ## Raw assets
 
@@ -13,15 +13,24 @@ You'll need 2 main asset files
 
 - Camera res: 1280x720
 - Slides res: 1243x777
-- When presenting, the slides have really ugly black vertical lines,
-  left and right
+- When presenting, the slides have really ugly black vertical stripes,
+  left and right. When showing code or other apps, the stripes are not
+  there. So we cannot overlap the slides over the speaker because most
+  of the time the black content would be showing over the speaker
+  footage. Therefore, we tile them next to each other, the closer the
+  better.
 
 - On the camera, usable stuff starts at 10:19
 - Both streams are in synchro at about 11:05 (camera) and 4:16 (slides)
 - So, the slides should start at
      4:16 - (11:05 - 10:19) = 
      4:16 - 0:46 = 
-     3:30
+     3:30 
+     After some fine tuning, we settle in 3:32
+
+- The camera video lasts for 54:09. If we start at 10:19, the real
+  length is 43:50. The last 3 seconds of the camera are not good, so
+  we have a final duration of 43:47.
 
 ## Building the video
 
@@ -31,7 +40,7 @@ You'll need 2 main asset files
 - Create an `output` folder inside this one.
 - run `make` inside this folder.
 
-The generation takes around 1 hour in a MacBook Pro, but your times
+The generation takes around 1/2 hour in a MacBook Pro, but your times
 can vary with the load of the machine, the kind of HD/SSD you use, and
 more. So, be patient.
 
@@ -44,9 +53,6 @@ new version of the full video.
 ## Organization
 
 The `Makefile` is built into basic steps
-
-- **camera**: Concats the 2 `.MTS` source files to have a single
-  origin for the whole session.
 
 - **video**: Composes a portion of the camera capture (centered around
   the speaker) with the screencast with the slides on top.

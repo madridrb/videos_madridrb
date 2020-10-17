@@ -6,4 +6,5 @@
 [o1][s2] overlay=0:0:enable='between(t,5,10)' [o2];
 [o2][s3] overlay=0:0:enable='between(t,10,15)' [o3];
 [o3][s4] overlay=0:0:enable='between(t,15,20)' [video];
-[video][5:a] concat=n=1:v=1:a=1 [v][a]
+[video] fade=out:st=19.5:d=0.5 [fvideo];
+[fvideo][5:a] concat=n=1:v=1:a=1 [v][a]

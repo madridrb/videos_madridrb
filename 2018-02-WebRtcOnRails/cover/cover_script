@@ -3,6 +3,7 @@ drawtext=textfile=date_text.txt:fontcolor=white:fontsize=21:x=w/2-text_w/2:y=h/2
 drawtext=textfile=contact_text.txt:fontcolor=0x888888:fontsize=16:x=w/2-text_w/2:y=h/2+400:fontfile='/Library/Fonts/Arial Black.ttf' [text];
 [2]scale=w=120:h=-1 [logo];
 [text][logo] overlay=main_w/2-overlay_w/2:main_h/2-overlay_h-100 [video];
-[video][1:a] concat=n=1:v=1:a=1 [v][a]
+[video] fade=in:st=0:d=1 [fvideo];
+[fvideo][1:a] concat=n=1:v=1:a=1 [v][a]
 
 

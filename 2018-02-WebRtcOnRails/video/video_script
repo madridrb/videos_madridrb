@@ -1,8 +1,10 @@
 color=black:s=1280x720 [black];
-[0]scale=w=-1:h=720 [s0];
+[0:a] afade=t=in:d=8, afade=out:d=7:st=2620 [fsound];
+[0:v]scale=w=-1:h=720 [s0];
 [s0]crop=w=466:x=466:y=0 [camera];
 [black][camera] overlay=0:0 [bg];
 [1]scale=w=800:h=-1 [slides];
 [bg][slides] overlay=main_w-overlay_w:main_h/2-overlay_h/2 [final];
-[final] drawtext=textfile=bottom_text.txt:fontcolor=0x888888:fontsize=13:x=w-text_w-10:y=h-text_h-1:fontfile='/Library/Fonts/Arial Black.ttf'
-
+[final] drawtext=textfile=bottom_text.txt:fontcolor=0x888888:fontsize=13:x=w-text_w-10:y=h-text_h-1:fontfile='/Library/Fonts/Arial Black.ttf' [tfinal];
+[tfinal] fade=in:st=0:d=1, fade=out:d=3:st=2624 [ftfinal];
+[ftfinal][fsound] concat=n=1:v=1:a=1 [v][a]

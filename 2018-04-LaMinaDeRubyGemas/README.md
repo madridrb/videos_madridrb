@@ -37,6 +37,10 @@ You'll need 2 main asset files
   question. The slides are not relevant anymore so we could stop the
   overlaying of the slides and get back to full camera view.
 
+- From 38:58 (2338) to 40:27 (2427) (adjusted camera time), the speaker also moves
+  into the right, so it would be good to hide the slides in this
+  interval, too.
+
 ## Building the video
 
 ### First run

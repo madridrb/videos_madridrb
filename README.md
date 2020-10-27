@@ -33,7 +33,10 @@ in https://www.madridrb.com and in Twitter @madridrb.
 
 ## Authors
 
-Written mostly by Josep Egea (jes@josepegea.com - @josepegea) 
+Written by Josep Egea (@josepegea).
+
+Original idea from Manuel González (@mgmerino) in
+https://github.com/mgmerino/video-tool
 
 ## License
 

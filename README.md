@@ -31,6 +31,10 @@ See the `README` for each individual session for particular details.
 Madrid.rb is a Ruby Users Group in Madrid, Spain. Learn more about us
 in https://www.madridrb.com and in Twitter @madridrb.
 
+## Authors
+
+Written mostly by Josep Egea (jes@josepegea.com - @josepegea) 
+
 ## License
 
 The code in this repo is licensed under a MIT license. The corporate

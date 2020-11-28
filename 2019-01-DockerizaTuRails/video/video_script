@@ -1,0 +1,11 @@
+color=black:s=1920x1080 [black];
+[0:a] afade=t=in:d=8, afade=out:d=7:st=2350 [fsound];
+[0]crop=w=800:x=850-('min(t-51,4)'*100*'gte(t,51)'):y=0 [camera];
+[black][camera] overlay=main_w-overlay_w:0 [bg];
+[2]scale=w=120:h=-1 [logo];
+[bg][logo] overlay=560-overlay_w/2:main_h-overlay_h-160 [bglogo];
+[1]scale=w=1400:h=-1 [slides];
+[bglogo][slides] overlay=10:main_h/2-overlay_h/2:enable='between(t,6,1805)'+'between(t,1830,1883)'+'between(t,2011,2170)'+'between(t,2247,2322)' [final];
+[final] drawtext=textfile=bottom_text.txt:fontcolor=0x888888:fontsize=20:x=560-text_w/2:y=h-text_h-1:fontfile='/Library/Fonts/Arial Black.ttf' [tfinal];
+[tfinal] fade=in:st=0:d=1, fade=out:d=3:st=2354 [ftfinal];
+[ftfinal][fsound] concat=n=1:v=1:a=1 [v][a]

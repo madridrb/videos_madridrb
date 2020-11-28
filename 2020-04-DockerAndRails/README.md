@@ -28,6 +28,20 @@ You'll need just one asset file
 
 - There's no need to trim anything from the end.
 
+- Even with just one video source, we're still going to use overlays
+  to have some branding at the bottom of the stream.
+  
+- Last, after generating the big video, which sounded fine, we noticed
+  that the full video (big video + cover, titles, sponsors) had bad
+  sound. It had a higher pitch than normal and it ran at a slightly
+  higher speed. After some investigation, we found out that the
+  (silent) audio tracks that we generate for the cover, titles, etc
+  were generated at 48000 Hz but the video had 44500 Hz, so, when
+  concatenating the cover with the video, it tried to use 48k for
+  everything and that distorted the 44.5k main track. After changing
+  the scripts that generate the cover, title and sponsors to use a
+  silent 44.5 soundtrack everything went fine.
+
 ## Building the video
 
 ### First run

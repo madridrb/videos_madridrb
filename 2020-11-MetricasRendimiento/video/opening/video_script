@@ -1,0 +1,3 @@
+[0:a] afade=t=in:d=2, afade=out:d=1:st=368 [fsound];
+[0:v] fade=in:st=0:d=3, fade=out:d=1:st=368 [fvideo];
+[fvideo][fsound] concat=n=1:v=1:a=1 [v][a]

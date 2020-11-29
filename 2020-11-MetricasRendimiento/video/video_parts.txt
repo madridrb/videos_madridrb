@@ -1,0 +1,3 @@
+file ../output/build/opening.mp4
+file ../output/build/talk.mp4
+file ../output/build/closing.mp4

@@ -76,7 +76,9 @@ There are 3 main asset files
 - Total duration: 06:09 + 50:16 + 16:49 = 73:14 = 1:13:14 = 4394 s
 
 - Although the 2 streams have the same resolution and sound freq, one
-  is 30 fps and the other
+  is 30 fps and the other is 25 fps, so we've had to force them to
+  have 25 fps because, if not, when concatenating the video the result
+  got out of control.
 
 ## Building the video
 

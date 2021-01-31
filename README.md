@@ -26,6 +26,17 @@ and run `make`.
 
 See the `README` for each individual session for particular details.
 
+## FFMPEG utilities
+
+Given that generating recipes for complex filters can be complex and
+the results can be really difficult to read, we've added some helper
+Ruby code in the `lib` folder that makes some things easier, like
+operating with times, getting the values from environment vars or
+generating banners over the video.
+
+You can see some usage of that in [this
+video](2021-01-28-RubyGUIApps/video/talk).
+
 ## About
 
 Madrid.rb is a Ruby Users Group in Madrid, Spain. Learn more about us

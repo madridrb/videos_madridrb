@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative 'ffmpeg_utils'
+
+puts parse_timestamp(ARGV[0])

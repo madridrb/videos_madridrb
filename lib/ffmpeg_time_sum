@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative 'ffmpeg_utils'
+
+puts ARGV.map { |t| parse_timestamp(t) }.sum

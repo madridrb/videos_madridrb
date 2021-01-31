@@ -1,0 +1,4 @@
+[0:a] afade=t=in:d=3, afade=out:d=1:st='4493.0' [fsound];
+[0] drawtext=textfile=banner1_text.txt:fontcolor=0x888888:box=1:boxcolor=0x222222:fontsize=32:x=main_w/2-text_w/2:y=h-220:fontfile='/Library/Fonts/Arial Black.ttf':enable='between(t,3613.0,3620.0)':alpha='0.9*between(t,3613.0,3620.0)*if(between(t,3613.0,3613.0+0.5),(t-3613.0)/0.5,1)*if(between(t,3620.0-0.5,3620.0),(3620.0-t)/0.5,1)' [tfinal];
+[tfinal] fade=in:st=0:d=1, fade=out:d=1:st='4493.0' [fvideo];
+[fvideo][fsound] concat=n=1:v=1:a=1 [v][a]

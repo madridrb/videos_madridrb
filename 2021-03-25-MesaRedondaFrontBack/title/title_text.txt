@@ -1,0 +1,4 @@
+Mesa redonda
+
+Compartiendo lógica de negocio
+entre back y front

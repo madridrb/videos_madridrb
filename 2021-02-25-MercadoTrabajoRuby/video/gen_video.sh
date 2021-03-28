@@ -1,8 +1,5 @@
-ruby video_script.rb > video_script
-
-ffmpeg -ss $STREAM_START -i ../input/obs_stream.mkv\
-       -filter_complex_script video_script \
-       -t $STREAM_DURATION \
-       -map "[v]" -map "[a]" \
-       -r 25 \
+ffmpeg -f concat \
+       -safe 0 \
+       -i video_parts.txt \
+       -c copy \
        -y ../output/build/video.mp4

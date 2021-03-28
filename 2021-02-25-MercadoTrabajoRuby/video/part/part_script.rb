@@ -1,7 +1,7 @@
 require_relative File.join(ENV['SCRIPT_LIB_DIR'], 'ffmpeg_utils')
 
-$stream_start = parse_env_timestamp('STREAM_START')
-$stream_end = parse_env_timestamp('STREAM_END')
+$stream_start = parse_env_timestamp('PART_START')
+$stream_end = parse_env_timestamp('PART_END')
 $duration = $stream_end - $stream_start
 
 res = <<-FFMPEG

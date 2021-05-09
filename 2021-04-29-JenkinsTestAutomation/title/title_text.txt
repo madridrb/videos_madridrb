@@ -1,0 +1,2 @@
+Using Jenkins to automate the testing
+of a Rails application in Google Cloud

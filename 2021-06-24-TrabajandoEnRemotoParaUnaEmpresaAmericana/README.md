@@ -54,6 +54,17 @@ There are 2 main asset files
   - Useful footage starts at 11:01
   
   - Finishes at 1:52:44
+  
+  - At 1:22:13 finishes the proper Q&A before the first intervention
+    by external audience.
+    
+  - 1:24:51 next question starts.
+  - 1:31:40 finished Raul's answer
+  
+  - 1:33:16 next question starts
+  - 1:37:31 end of answers
+  
+  - 1:41:58 the good bye starts
 
   - Tentative sync point between sources:
     - OBS: 11:52

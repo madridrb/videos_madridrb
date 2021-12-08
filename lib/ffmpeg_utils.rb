@@ -11,6 +11,22 @@ def parse_env_timestamp(var)
   parse_timestamp(ENV[var])
 end
 
+def all_videos_root
+  File.expand_path(File.join(__FILE__, "../.."))
+end
+
+def shared_folder
+  File.join(all_videos_root, "shared")
+end
+
+def fonts_folder
+  File.join(shared_folder, "fonts")
+end
+
+def default_font
+  File.join(fonts_folder, "arial-black_allfont_net.ttf")
+end
+
 def banner(textfile, start_t, end_t, options = {})
   "drawtext=textfile=#{textfile}" +
     ":fontcolor=#{options[:fontcolor] || '0x888888'}" +
@@ -19,7 +35,7 @@ def banner(textfile, start_t, end_t, options = {})
     ":fontsize=#{options[:fontsize] || '32'}" +
     ":x=#{options[:x] || 'main_w/2-text_w/2'}" +
     ":y=#{options[:y] || 'h-220'}" +
-    ":fontfile=#{options[:fontfile] || '\'/Library/Fonts/Arial Black.ttf\''}" +
+    ":fontfile=#{options[:fontfile] || '\'' + default_font + '\''}" +
     ":enable='between(t,#{start_t},#{end_t})'" +
     ":alpha='0.9*between(t,#{start_t},#{end_t})*" +
     "if(between(t,#{start_t},#{start_t}+0.5),(t-#{start_t})/0.5,1)*" +

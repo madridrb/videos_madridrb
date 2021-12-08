@@ -1,0 +1,1 @@
+How denormalizing our Postgres turned great

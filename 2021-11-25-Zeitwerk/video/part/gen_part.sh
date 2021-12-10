@@ -17,6 +17,14 @@ ruby part_script.rb > part_script
 
 ffmpeg -ss $PART_START -t $PART_DURATION -i ../../input/Madridrb_November_2021.mp4\
        -i ../../../shared/madridrb-logo.png \
+       -i ../../../shared/logo_bebanjo.png \
+       -i ../../../shared/logo_platform161_horiz_bw_small.jpg \
+       -i ../../../shared/logo_the_cocktail.png \
+       -i ../../../shared/digital55_black.png \
+       -i ../../../shared/logo_sngular.png \
+       -i ../../../shared/logo_aspgems.png \
+       -i ../../../shared/logo_jobfluent.png \
+       -i ../../../shared/logo_getro.png \
        -filter_complex_script part_script \
        -t $PART_DURATION \
        -map "[v]" -map "[a]" \

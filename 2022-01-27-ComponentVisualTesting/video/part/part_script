@@ -1,0 +1,39 @@
+[0:a] afade=t=in:d=1, afade=out:d=1:st=4238.0 [fsound0];
+[0:v] fade=in:st=0:d=1, fade=out:d=1:st=4238.0 [origvideo];
+
+color=black:s=1920x1080 [simple_frame_bg];
+[1]scale=w=-1:h=120 [simple_frame_logo];
+[simple_frame_bg][simple_frame_logo] overlay=main_w-150-overlay_w/2:10 [simple_frame_bglogo];
+[origvideo]scale=w=-1:h=900 [simple_frame_stream];
+[simple_frame_bglogo][simple_frame_stream] overlay=10:10 [simple_frame_composite];
+
+[simple_frame_composite] drawtext=textfile=../../title/title_text.txt:fontcolor=0xffffff:fontsize=36:x=10:y=930:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-1];
+[simple_frame_composite-text-1] drawtext=textfile=../../title/speaker_text.txt:fontcolor=0xaaaaaa:fontsize=18:x=10:y=970:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-2];
+[simple_frame_composite-text-2] drawtext=textfile=../../cover/date_text.txt:fontcolor=0x880000:fontsize=16:x=10:y=1000:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-3];
+
+[simple_frame_composite-text-3] drawtext=textfile=../../cover/cover_text.txt:fontcolor=0xffffff:fontsize=42:x=main_w-150-text_w/2:y=140:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-4];
+[simple_frame_composite-text-4] drawtext=text='Grupo de Ruby de Madrid':fontcolor=0xaaaaaa:fontsize=20:x=main_w-150-text_w/2:y=180:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-5];
+
+[simple_frame_composite-text-5] drawtext=text='www.madridrb.com':fontcolor=0x285FED:fontsize=24:x=main_w-150-text_w/2:y=260:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-6];
+[simple_frame_composite-text-6] drawtext=text='@madridrb':fontcolor=0x285FED:fontsize=24:x=main_w-150-text_w/2:y=320:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-7];
+
+[simple_frame_composite-text-7] drawtext=text='Ofrecido por':fontcolor=0xffffff:fontsize=24:x=main_w-150-text_w/2:y=900:fontfile=/Users/jes/Code/MadridRB/VideosMadridRB/shared/fonts/arial-black_allfont_net.ttf [simple_frame_composite-text-8];
+
+[2]scale=h=-1:w=272 [sponsor_logo_1];
+[simple_frame_composite-text-8][sponsor_logo_1] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,0\,4) [simple_frame_sponsorlogo_1];
+[3]scale=h=-1:w=272 [sponsor_logo_2];
+[simple_frame_sponsorlogo_1][sponsor_logo_2] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,4\,8) [simple_frame_sponsorlogo_2];
+[4]scale=h=-1:w=272 [sponsor_logo_3];
+[simple_frame_sponsorlogo_2][sponsor_logo_3] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,8\,12) [simple_frame_sponsorlogo_3];
+[5]scale=h=-1:w=272 [sponsor_logo_4];
+[simple_frame_sponsorlogo_3][sponsor_logo_4] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,12\,16) [simple_frame_sponsorlogo_4];
+[6]scale=h=-1:w=272 [sponsor_logo_5];
+[simple_frame_sponsorlogo_4][sponsor_logo_5] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,16\,20) [simple_frame_sponsorlogo_5];
+[7]scale=h=-1:w=272 [sponsor_logo_6];
+[simple_frame_sponsorlogo_5][sponsor_logo_6] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,20\,24) [simple_frame_sponsorlogo_6];
+[8]scale=h=-1:w=272 [sponsor_logo_7];
+[simple_frame_sponsorlogo_6][sponsor_logo_7] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,24\,28) [simple_frame_sponsorlogo_7];
+[9]scale=h=-1:w=272 [sponsor_logo_8];
+[simple_frame_sponsorlogo_7][sponsor_logo_8] overlay=main_w-150-overlay_w/2:940:enable=between(mod(t\,32)\,28\,32) [simple_frame_sponsorlogo_8];
+
+[simple_frame_sponsorlogo_8][fsound0] concat=n=1:v=1:a=1 [v][a]

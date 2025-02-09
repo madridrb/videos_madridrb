@@ -1,0 +1,1 @@
+Component visual testing with ViewCompontents and Appraise.qa 

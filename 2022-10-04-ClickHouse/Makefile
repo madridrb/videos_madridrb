@@ -1,11 +1,14 @@
 BUILD_DIR=output/build
 $(info $(shell mkdir -p $(BUILD_DIR)))
 
-output/full_video.mp4: full_video/* $(BUILD_DIR)/video.mp4 $(BUILD_DIR)/sponsors.mp4 $(BUILD_DIR)/title.mp4 $(BUILD_DIR)/cover.mp4 $(BUILD_DIR)/credits.mp4
+output/full_video.mp4: full_video/* $(BUILD_DIR)/video.mp4 $(BUILD_DIR)/sponsors.mp4 $(BUILD_DIR)/title.mp4 $(BUILD_DIR)/cover.mp4 $(BUILD_DIR)/credits.mp4 $(BUILD_DIR)/missing_slides.mp4
 	cd full_video && bash gen_full_video.sh
 
 $(BUILD_DIR)/video.mp4: video/* input/*
 	cd video && make
+
+$(BUILD_DIR)/missing_slides.mp4: missing_slides/*
+	cd missing_slides && bash gen_missing_slides.sh
 
 $(BUILD_DIR)/sponsors.mp4: sponsors/* ../shared/sponsors*.png
 	cd sponsors && bash gen_sponsors.sh

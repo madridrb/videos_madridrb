@@ -1,0 +1,1 @@
+Solid Queue internals, externals and all the things in between

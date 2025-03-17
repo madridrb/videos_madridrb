@@ -1,0 +1,3 @@
+file ../input/Camera-00008.MTS
+file ../input/Camera-00009.MTS
+

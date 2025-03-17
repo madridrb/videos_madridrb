@@ -1,0 +1,8 @@
+[0:v] fade=in:st=0:d=1, fade=out:d=1:st=2280.0 [origvideo];
+[1:v] fade=in:st=0:d=1, fade=out:d=1:st=2280.0 [cameravideo];
+[1:a] afade=in:st=0:d=1, afade=out:d=1:st=2280.0 [camerasound];
+[camerasound] pan=stereo|FL<FL+0.5*FC+0.6*BL+0.3*LFE|FR<FR+0.5*FC+0.6*BR+0.3*LFE [sound_in_stereo];
+[cameravideo]scale=w=-1:h=180 [scaledcameravideo];
+[origvideo][scaledcameravideo] overlay=0:main_h-overlay_h [videowithupdatedcamera];
+
+[videowithupdatedcamera][sound_in_stereo] concat=n=1:v=1:a=1 [v][a]

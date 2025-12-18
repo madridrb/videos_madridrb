@@ -25,6 +25,7 @@ ffmpeg -ss $PART_START -t $PART_DURATION -i ../../input/2025-10-30-OpenFGAGem-OB
        -map "[v]" -map "[a]" \
        -r 25 \
        -ar 48000 \
+       -ac 2 \
        -loglevel verbose \
        -y ../output/build/part_$PART_NUMBER.mp4
 

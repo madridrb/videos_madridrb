@@ -1,0 +1,4 @@
+[0:v] fade=in:st=0:d=1, fade=out:d=1:st=2127.0 [origvideo];
+[0:a] afade=in:st=0:d=1, afade=out:d=1:st=2127.0 [origsound];
+
+[origvideo][origsound] concat=n=1:v=1:a=1 [v][a]

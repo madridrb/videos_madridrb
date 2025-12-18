@@ -1,1 +1,1 @@
-# Building a ruby gem for OpenFGA
+Building a ruby gem for OpenFGA
